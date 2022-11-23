@@ -3,7 +3,7 @@ const app         = express();
 const bodyParser  = require("body-parser");
 const morgan      = require("morgan");
 const counters = require("./lib/counters");
-const port = 3100
+const port = process.env.PORT || 3030
 
 app.use(morgan("combined"));
 app.use(bodyParser.json());
